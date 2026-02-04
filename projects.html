@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Projects - Virgil Ciociu</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300;400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+    
+    <!-- CSS Stylesheet -->
+    <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body>
+    <!-- NAVIGATION MENU -->
+    <nav class="main-nav">
+        <div class="nav-brand">
+            <a href="index.html">Virgil Ciociu</a>
+        </div>
+        <button class="nav-toggle" aria-label="Toggle navigation">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+        <ul class="nav-menu">
+            <li><a href="index.html" class="nav-link" id="nav-home">Home</a></li>
+            <li><a href="about.html" class="nav-link" id="nav-about">About Me</a></li>
+            <li><a href="projects.html" class="nav-link active" id="nav-projects">My Projects</a></li>
+            <li><a href="contact.html" class="nav-link" id="nav-contact">Get in Touch</a></li>
+        </ul>
+    </nav>
+
+    <!-- PROJECTS SECTION -->
+    <section class="projects-page">
+        <div class="container">
+            <h1 class="page-title">
+                <span id="page-title-1">My</span>
+                <span id="page-title-2">Projects</span>
+            </h1>
+
+            <div class="projects-grid">
+                <!-- Project 1: ART Shop -->
+                <div class="project-card">
+                    <h3 id="project-1-title">ART Shop</h3>
+                    <p id="project-1-desc">A comprehensive e-commerce platform for art supplies and creative materials.</p>
+                    <a href="https://www.cassart.co.uk/" target="_blank" class="project-link">
+                        <span id="project-1-link">View Live Project</span>
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <line x1="5" y1="12" x2="19" y2="12"></line>
+                            <polyline points="12 5 19 12 12 19"></polyline>
+                        </svg>
+                    </a>
+                </div>
+
+                <!-- Project 2: YouTube To MP3 -->
+                <div class="project-card">
+                    <h3 id="project-2-title">YouTube To MP3</h3>
+                    <p id="project-2-desc">A powerful web application for converting YouTube videos to high-quality MP3 audio files.</p>
+                    <a href="https://www.hirequotient.com/youtube-to-mp3" target="_blank" class="project-link">
+                        <span id="project-2-link">View Live Project</span>
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <line x1="5" y1="12" x2="19" y2="12"></line>
+                            <polyline points="12 5 19 12 12 19"></polyline>
+                        </svg>
+                    </a>
+                </div>
+
+                <!-- Project 3: Restaurants Portfolio -->
+                <div class="project-card">
+                    <h3 id="project-3-title">Restaurants Portfolio</h3>
+                    <p id="project-3-desc">A collection of elegant restaurant websites featuring modern design and seamless user experience.</p>
+                    <div class="project-links-multiple">
+                        <a href="https://shaksgrillhouse.co.uk/" target="_blank" class="project-link-small">
+                            <span id="project-3-link-1">Shak's Grill</span>
+                        </a>
+                        <a href="https://virgilciociu.github.io/restaurant/" target="_blank" class="project-link-small">
+                            <span id="project-3-link-2">A Restauramt in Germany</span>
+                        </a>
+                        <a href="https://laterrazatapasbar.co.uk/" target="_blank" class="project-link-small">
+                            <span id="project-3-link-3">La Terraza</span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Project 4: AutoGarage -->
+                <div class="project-card">
+                    <h3 id="project-4-title">AutoGarage</h3>
+                    <p id="project-4-desc">A professional automotive service website with booking system and service catalog.</p>
+                    <a href="https://motamecltd.co.uk/" target="_blank" class="project-link">
+                        <span id="project-4-link">View Live Project</span>
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <line x1="5" y1="12" x2="19" y2="12"></line>
+                            <polyline points="12 5 19 12 12 19"></polyline>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+
+            <!-- TEXT FRAME UNDER PROJECTS -->
+            <div class="projects-text-frame">
+                <p id="projects-description">
+                    Each project represents a unique challenge and a commitment to excellence. From e-commerce platforms to restaurant websites, I bring creativity and technical expertise to every build.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- JavaScript -->
+    <script src="js/script.js"></script>
+    
+    <!-- Language Detection Script -->
+    <script>
+      const texts = {
+        en: {
+          navHome: "Home",
+          navAbout: "About Me",
+          navProjects: "My Projects",
+          navContact: "Get in Touch",
+          pageTitle1: "My",
+          pageTitle2: "Projects",
+          project1Title: "ART Shop",
+          project1Desc: "A comprehensive e-commerce platform for art supplies and creative materials.",
+          project1Link: "View Live Project",
+          project2Title: "YouTube To MP3",
+          project2Desc: "A powerful web application for converting YouTube videos to high-quality MP3 audio files.",
+          project2Link: "View Live Project",
+          project3Title: "Restaurants Portfolio",
+          project3Desc: "A collection of elegant restaurant websites featuring modern design and seamless user experience.",
+          project3Link1: "Shak's Grill",
+          project3Link2: "A Restaurant in Germany",
+          project3Link3: "La Terraza",
+          project4Title: "AutoGarage",
+          project4Desc: "A professional automotive service website with booking system and service catalog.",
+          project4Link: "View Live Project",
+          projectsDescription: "Each project represents a unique challenge and a commitment to excellence. From e-commerce platforms to restaurant websites, I bring creativity and technical expertise to every build."
+        },
+        ro: {
+          navHome: "Acasă",
+          navAbout: "Despre Mine",
+          navProjects: "Proiectele Mele",
+          navContact: "Contact",
+          pageTitle1: "Proiectele",
+          pageTitle2: "Mele",
+          project1Title: "ART Shop",
+          project1Desc: "O platformă e-commerce cuprinzătoare pentru produse de artă și materiale creative.",
+          project1Link: "Vezi Proiectul Live",
+          project2Title: "YouTube To MP3",
+          project2Desc: "O aplicație web puternică pentru convertirea videoclipurilor YouTube în fișiere audio MP3 de înaltă calitate.",
+          project2Link: "Vezi Proiectul Live",
+          project3Title: "Portofoliu Restaurante",
+          project3Desc: "O colecție de site-uri elegante pentru restaurante, cu design modern și experiență fluidă pentru utilizatori.",
+          project3Link1: "Shak's Grill",
+          project3Link2: "Restaurant Personalizat",
+          project3Link3: "La Terraza",
+          project4Title: "AutoGarage",
+          project4Desc: "Un site web profesional pentru service auto cu sistem de rezervări și catalog de servicii.",
+          project4Link: "Vezi Proiectul Live",
+          projectsDescription: "Fiecare proiect reprezintă o provocare unică și un angajament către excelență. De la platforme e-commerce la site-uri pentru restaurante, aduc creativitate și expertiză tehnică la fiecare realizare."
+        }
+      };
+
+      function applyLanguage(lang) {
+        const t = texts[lang] || texts.en;
+        document.documentElement.setAttribute("lang", lang);
+        
+        document.getElementById("nav-home").textContent = t.navHome;
+        document.getElementById("nav-about").textContent = t.navAbout;
+        document.getElementById("nav-projects").textContent = t.navProjects;
+        document.getElementById("nav-contact").textContent = t.navContact;
+        document.getElementById("page-title-1").textContent = t.pageTitle1;
+        document.getElementById("page-title-2").textContent = t.pageTitle2;
+        document.getElementById("project-1-title").textContent = t.project1Title;
+        document.getElementById("project-1-desc").textContent = t.project1Desc;
+        document.getElementById("project-1-link").textContent = t.project1Link;
+        document.getElementById("project-2-title").textContent = t.project2Title;
+        document.getElementById("project-2-desc").textContent = t.project2Desc;
+        document.getElementById("project-2-link").textContent = t.project2Link;
+        document.getElementById("project-3-title").textContent = t.project3Title;
+        document.getElementById("project-3-desc").textContent = t.project3Desc;
+        document.getElementById("project-3-link-1").textContent = t.project3Link1;
+        document.getElementById("project-3-link-2").textContent = t.project3Link2;
+        document.getElementById("project-3-link-3").textContent = t.project3Link3;
+        document.getElementById("project-4-title").textContent = t.project4Title;
+        document.getElementById("project-4-desc").textContent = t.project4Desc;
+        document.getElementById("project-4-link").textContent = t.project4Link;
+        document.getElementById("projects-description").textContent = t.projectsDescription;
+      }
+
+      fetch("https://ipapi.co/json/")
+        .then(response => response.json())
+        .then(data => {
+          const lang = data.country_code === "RO" ? "ro" : "en";
+          applyLanguage(lang);
+        })
+        .catch(() => {
+          applyLanguage("en");
+        });
+    </script>
+</body>
+</html>

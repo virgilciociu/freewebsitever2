@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About Me - Virgil Ciociu</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300;400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+    
+    <!-- CSS Stylesheet -->
+    <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body>
+    <!-- NAVIGATION MENU -->
+    <nav class="main-nav">
+        <div class="nav-brand">
+            <a href="index.html">Virgil C</a>
+        </div>
+        <button class="nav-toggle" aria-label="Toggle navigation">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+        <ul class="nav-menu">
+            <li><a href="index.html" class="nav-link" id="nav-home">Home</a></li>
+            <li><a href="about.html" class="nav-link active" id="nav-about">About Me</a></li>
+            <li><a href="projects.html" class="nav-link" id="nav-projects">My Projects</a></li>
+            <li><a href="contact.html" class="nav-link" id="nav-contact">Get in Touch</a></li>
+        </ul>
+    </nav>
+
+    <!-- ABOUT ME SECTION -->
+    <section class="about-page">
+        <div class="container">
+            <h1 class="page-title">
+                <span id="page-title-1">About</span>
+                <span id="page-title-2">Me</span>
+            </h1>
+
+            <div class="about-content">
+                <div class="about-avatar">
+                    <div class="avatar-frame">
+                        <img src="image/avatar-marian-zburlea.jpg" alt="Virgil Ciociu">
+                    </div>
+                </div>
+
+                <div class="about-text">
+                    <div class="text-frame">
+                        <p id="about-description">
+                            I am a dedicated Front-End Developer with a passion for creating beautiful, functional websites. With expertise in modern web technologies and a keen eye for design, I bring ideas to life through clean code and intuitive user experiences. Every project is an opportunity to push boundaries and deliver excellence.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- JavaScript -->
+    <script src="js/script.js"></script>
+    
+    <!-- Language Detection Script -->
+    <script>
+      const texts = {
+        en: {
+          navHome: "Home",
+          navAbout: "About Me",
+          navProjects: "My Projects",
+          navContact: "Get in Touch",
+          pageTitle1: "About",
+          pageTitle2: "Me",
+          aboutDescription: "I am a dedicated Front-End Developer with a passion for creating beautiful, functional websites. With expertise in modern web technologies and a keen eye for design, I bring ideas to life through clean code and intuitive user experiences. Every project is an opportunity to push boundaries and deliver excellence."
+        },
+        ro: {
+          navHome: "Acasă",
+          navAbout: "Despre Mine",
+          navProjects: "Proiectele Mele",
+          navContact: "Contact",
+          pageTitle1: "Despre",
+          pageTitle2: "Mine",
+          aboutDescription: "Sunt un dezvoltator Front-End dedicat, cu pasiune pentru crearea de site-uri frumoase și funcționale. Cu experiență în tehnologii web moderne și un ochi pentru design, transform ideile în realitate prin cod curat și experiențe intuitive pentru utilizatori. Fiecare proiect este o oportunitate de a depăși limitele și de a oferi excelență."
+        }
+      };
+
+      function applyLanguage(lang) {
+        const t = texts[lang] || texts.en;
+        document.documentElement.setAttribute("lang", lang);
+        
+        document.getElementById("nav-home").textContent = t.navHome;
+        document.getElementById("nav-about").textContent = t.navAbout;
+        document.getElementById("nav-projects").textContent = t.navProjects;
+        document.getElementById("nav-contact").textContent = t.navContact;
+        document.getElementById("page-title-1").textContent = t.pageTitle1;
+        document.getElementById("page-title-2").textContent = t.pageTitle2;
+        document.getElementById("about-description").textContent = t.aboutDescription;
+      }
+
+      fetch("https://ipapi.co/json/")
+        .then(response => response.json())
+        .then(data => {
+          const lang = data.country_code === "RO" ? "ro" : "en";
+          applyLanguage(lang);
+        })
+        .catch(() => {
+          applyLanguage("en");
+        });
+    </script>
+</body>
+</html>

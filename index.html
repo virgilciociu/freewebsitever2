@@ -1,148 +1,162 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+<head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Fron to End Programmer Virgil Ciociu</title>
+    <title>Virgil Ciociu - Portfolio</title>
 
     <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.gstatic.com" />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700;900&display=swap"
-      rel="stylesheet"
-    />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300;400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
     
-    <!-- CSS Stylesheets -->
-    <link rel="stylesheet" href="css/looks.css" />
-    <link rel="stylesheet" href="css/style.css" /> <!-- Am adăugat referința aici -->
-    
-    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
-  </head>
+    <!-- CSS Stylesheet -->
+    <link rel="stylesheet" href="css/style.css" />
+</head>
 
-  <body>
-    <!-- Welcome Section -->
-    <div class="grid">
-      <div data-full>
-        <h1><span>Virgil</span> <span>Ciociu</span></h1>
-      </div>
-
-      <div data-full>
-        <h2><span>Front-End</span> <span>Operator</span></h2>
-      </div>
-
-      <div data-full>
-        <div class="break-52"></div>
-      </div>
-
-      <div data-full>
-        <h3><span>About</span> <span>me</span></h3>
-      </div>
-
-      <div data-full>
-        <div class="break-16"></div>
-      </div>
-
-      <div data-full>
-        <div class="shadow-box">
-          <p class="description">
-            I am a dedicated Front-End Programmer with a passion for creating websites.You can access all my media accounts here so we can get in contact. Pressint the icons in Let's Connect sections you cand see all my acconts including the GitHub where you can see all my live websites (100 plus).
-          </p>
+<body>
+    <!-- NAVIGATION MENU -->
+    <nav class="main-nav">
+        <div class="nav-brand">
+            <a href="index.html">Virgil C</a>
         </div>
-      </div>
+        <button class="nav-toggle" aria-label="Toggle navigation">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+        <ul class="nav-menu">
+            <li><a href="index.html" class="nav-link active" id="nav-home">Home</a></li>
+            <li><a href="about.html" class="nav-link" id="nav-about">About Me</a></li>
+            <li><a href="projects.html" class="nav-link" id="nav-projects">My Projects</a></li>
+            <li><a href="contact.html" class="nav-link" id="nav-contact">Get in Touch</a></li>
+        </ul>
+    </nav>
 
-      <div data-full>
-        <div class="break-16"></div>
-      </div>
+    <!-- HERO SECTION WITH SLIDER -->
+    <section class="hero-slider-section">
+        <div class="hero-content-wrapper">
+            <!-- LEFT PROMO TEXT -->
+            <div class="hero-promo-left">
+                <h2 class="promo-title" id="promo-left-title">Websiteul tău<br><span class="highlight">100% GRATIS</span></h2>
+                <p class="promo-subtitle" id="promo-left-subtitle">Construim website-ul perfect pentru afacerea ta, complet gratuit!</p>
+            </div>
 
-      <div data-full>
-        <a href="cv_virgil_ciociu.pdf" download>
-          <button class="download-btn">
-            <img src="image/download.png" alt="download icon" />
-            <span>Download My CV</span>
-          </button>
-        </a>
+            <!-- SLIDER -->
+            <div class="slider-container">
+                <button class="slider-arrow slider-arrow-left" aria-label="Previous project">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3">
+                        <polyline points="15 18 9 12 15 6"></polyline>
+                    </svg>
+                </button>
+
+                <div class="slider-wrapper">
+                    <div class="slider-track">
+                        <div class="slide active">
+                            <img src="image/ArtShopp.jpg" alt="ArtShopp Project">
+                        </div>
+                        <div class="slide">
+                            <img src="image/AutoGarage.jpg" alt="AutoGarage Project">
+                        </div>
+                        <div class="slide">
+                            <img src="image/LaTerrazaRest.jpg" alt="La Terraza Restaurant">
+                        </div>
+                        <div class="slide">
+                            <img src="image/MP3Converter.jpg" alt="MP3 Converter">
+                        </div>
+                        <div class="slide">
+                            <img src="image/Shak'sGrill.jpg" alt="Shak's Grill">
+                        </div>
+                        <div class="slide">
+                            <img src="image/SiegridRestaurant.jpg" alt="Siegrid Restaurant">
+                        </div>
+                    </div>
+                </div>
+
+                <button class="slider-arrow slider-arrow-right" aria-label="Next project">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3">
+                        <polyline points="9 18 15 12 9 6"></polyline>
+                    </svg>
+                </button>
+            </div>
+
+            <!-- RIGHT PROMO TEXT -->
+            <div class="hero-promo-right">
+                <h2 class="promo-title" id="promo-right-title">Adu la viață<br>afacerea<br><span class="highlight">100% GRATIS</span></h2>
+                <p class="promo-subtitle" id="promo-right-subtitle">Transformăm viziunea ta în realitate digitală fără costuri inițiale!</p>
+            </div>
+        </div>
+
+        <!-- MAINTENANCE INFO UNDER SLIDER -->
+        <div class="maintenance-info">
+            <div class="maintenance-card">
+                <h3 id="maintenance-title">Mentenanță Profesională</h3>
+                <p id="maintenance-text">
+                    <span class="price-highlight">De la £12/lună</span><br>
+                    Mentenanță adaptată nevoilor tale. Plătești doar pentru actualizări și suport continuu.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- JavaScript -->
+    <script src="js/script.js"></script>
+    
+    <!-- Language Detection Script -->
+    <script>
+      const texts = {
+        en: {
+          navHome: "Home",
+          navAbout: "About Me",
+          navProjects: "My Projects",
+          navContact: "Get in Touch",
+          promoLeftTitle: "Your Website<br><span class=\"highlight\">100% FREE</span>",
+          promoLeftSubtitle: "We build the perfect website for your business, completely free!",
+          promoRightTitle: "Bring Your<br>Business to Life<br><span class=\"highlight\">100% FREE</span>",
+          promoRightSubtitle: "We transform your vision into digital reality with no upfront costs!",
+          maintenanceTitle: "Professional Maintenance",
+          maintenanceText: "<span class=\"price-highlight\">From £12/month</span><br>Maintenance tailored to your needs. Pay only for updates and ongoing support."
+        },
+        ro: {
+          navHome: "Acasă",
+          navAbout: "Despre Mine",
+          navProjects: "Proiectele Mele",
+          navContact: "Contact",
+          promoLeftTitle: "Websiteul tău<br><span class=\"highlight\">100% GRATIS</span>",
+          promoLeftSubtitle: "Construim website-ul perfect pentru afacerea ta, complet gratuit!",
+          promoRightTitle: "Adu la viață<br>afacerea<br><span class=\"highlight\">100% GRATIS</span>",
+          promoRightSubtitle: "Transformăm viziunea ta în realitate digitală fără costuri inițiale!",
+          maintenanceTitle: "Mentenanță Profesională",
+          maintenanceText: "<span class=\"price-highlight\">De la £12/lună</span><br>Mentenanță adaptată nevoilor tale. Plătești doar pentru actualizări și suport continuu."
+        }
+      };
+
+      function applyLanguage(lang) {
+        const t = texts[lang] || texts.en;
+        document.documentElement.setAttribute("lang", lang);
         
-        
-      </div>
-      <div data-full>
-        <div class="break-52"></div>
-      </div>
+        document.getElementById("nav-home").textContent = t.navHome;
+        document.getElementById("nav-about").textContent = t.navAbout;
+        document.getElementById("nav-projects").textContent = t.navProjects;
+        document.getElementById("nav-contact").textContent = t.navContact;
+        document.getElementById("promo-left-title").innerHTML = t.promoLeftTitle;
+        document.getElementById("promo-left-subtitle").textContent = t.promoLeftSubtitle;
+        document.getElementById("promo-right-title").innerHTML = t.promoRightTitle;
+        document.getElementById("promo-right-subtitle").textContent = t.promoRightSubtitle;
+        document.getElementById("maintenance-title").textContent = t.maintenanceTitle;
+        document.getElementById("maintenance-text").innerHTML = t.maintenanceText;
+      }
 
-      <div data-full>
-        <button data-style="disc"></button>
-      </div>
-
-      <div data-full>
-        <div class="break-52"></div>
-      </div>
-    </div>
-
-    <!-- Connect Section -->
-    <div class="grid" id="connect">
-      <div data-full>
-        <div class="break-52"></div>
-      </div>
-
-      <div data-full>
-        <h3><span>Let's</span> <span>connect</span></h3>
-      </div>
-
-      <div data-full>
-        <div class="break-16"></div>
-      </div>
-
-      <div data-row="4" data-column="4">
-        <div
-          class="image-square"
-          style="background-image: url(image/avatar-marian-zburlea.jpg)"
-        ></div>
-      </div>
-
-      <a href="https://github.com/Adrian01C" target="_blank">
-        <div class="social__icon social__icon--purple" style="background-image: url(image/github.png)"></div>
-      </a>
-      
-      <a href="https://www.hostinger.com/uk/tutorials/wp-content/uploads/sites/51/2024/09/Paper-Toilet-homepage.png" target="_blank">
-        <div class="social__icon social__icon--purple" style="background-image: url(image/stack-overflow.png)"></div>
-      </a>
-      
-      <a href="https://x.com/adrian_ciociu" target="_blank">
-        <div class="social__icon social__icon--green" style="background-image: url(image/twitter.png)"></div>
-      </a>
-      
-      <a href="https://www.youtube.com/@adrianciociu9261" target="_blank">
-        <div class="social__icon social__icon--red" style="background-image: url(image/youtube.png)"></div>
-      </a>
-      
-      <a href="https://www.hostinger.com/uk/tutorials/wp-content/uploads/sites/51/2024/09/Paper-Toilet-homepage.png" target="_blank">
-        <div class="social__icon social__icon--orange" style="background-image: url(image/skype.png)"></div>
-      </a>
-      
-      <a href="https://www.linkedin.com/in/virgil-adrian-ciociu-3a6122b4/" target="_blank">
-        <div class="social__icon social__icon--yellow" style="background-image: url(image/linkedin.png)"></div>
-      </a>
-
-      <div data-full>
-        <div class="break-52"></div>
-      </div>
-
-      <div data-full>
-        <button data-style="disc"></button>
-      </div>
-
-      <div data-full>
-        <div class="break-52"></div>
-      </div>
-    </div>
-
-    <footer>
-      <nav class="footer__link--wrapper">
-        <a class="footer__link" href="#">About me</a>
-        <a class="footer__link" href="#connect">Let's connect</a>
-        <a class="footer__link" href="#skills">My skills</a>
-      </nav>
-      <div class="footer__copy">&copy; 2025 - Virgil Ciociu</div>
-    </footer>
-  </body>
+      fetch("https://ipapi.co/json/")
+        .then(response => response.json())
+        .then(data => {
+          const lang = data.country_code === "RO" ? "ro" : "en";
+          applyLanguage(lang);
+        })
+        .catch(() => {
+          applyLanguage("en");
+        });
+    </script>
+</body>
 </html>
