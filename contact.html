@@ -28,8 +28,8 @@
         </button>
         <ul class="nav-menu">
             <li><a href="index.html" class="nav-link" id="nav-home">Home</a></li>
-            <li><a href="about.html" class="nav-link" id="nav-about">About Me</a></li>
-            <li><a href="projects.html" class="nav-link" id="nav-projects">My Projects</a></li>
+            <li><a href="about.html" class="nav-link" id="nav-about">About Us</a></li>
+            <li><a href="projects.html" class="nav-link" id="nav-projects">Our Projects</a></li>
             <li><a href="contact.html" class="nav-link active" id="nav-contact">Get in Touch</a></li>
         </ul>
     </nav>
@@ -44,22 +44,87 @@
 
             <div class="contact-content">
                 <p class="contact-intro" id="contact-text">
-                    Ready to bring your vision to life? Let's connect and create something extraordinary together.
+                    Ready to bring your vision to life? Let's connect with our team and create something extraordinary together.
                 </p>
                 
-                <a href="/cdn-cgi/l/email-protection#7e1d17111d170b501f1a0c3e19131f1712501d1113" class="email-link">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                        <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
-                        <polyline points="22,6 12,13 2,6"></polyline>
-                    </svg>
-                    <span><span class="__cf_email__" data-cfemail="8eede7e1ede7fba0efeafccee9e3efe7e2a0ede1e3">[email&#160;protected]</span></span>
-                </a>
+                <div class="email-copy-wrapper">
+                    <button class="email-copy-button" id="copyEmailBtn" onclick="copyEmailToClipboard()">
+                        <svg class="email-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                            <polyline points="22,6 12,13 2,6"></polyline>
+                        </svg>
+                        <span class="email-text">ciociu.adr@gmail.com</span>
+                        <svg class="copy-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                            <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                        </svg>
+                    </button>
+                    <div class="copy-success-message" id="copySuccessMsg">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3">
+                            <polyline points="20 6 9 17 4 12"></polyline>
+                        </svg>
+                        <span id="copy-success-text">Email copied to clipboard!</span>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
 
     <!-- JavaScript -->
-    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script src="js/script.js"></script>
+    <script src="js/script.js"></script>
+    
+    <!-- Click-to-Copy Email Script -->
+    <script>
+        function copyEmailToClipboard() {
+            const email = 'ciociu.adr@gmail.com';
+            
+            // Modern way - Clipboard API
+            if (navigator.clipboard && navigator.clipboard.writeText) {
+                navigator.clipboard.writeText(email).then(() => {
+                    showCopySuccess();
+                }).catch(err => {
+                    // Fallback if Clipboard API fails
+                    fallbackCopyEmail(email);
+                });
+            } else {
+                // Fallback for older browsers
+                fallbackCopyEmail(email);
+            }
+        }
+
+        function fallbackCopyEmail(email) {
+            const textArea = document.createElement('textarea');
+            textArea.value = email;
+            textArea.style.position = 'fixed';
+            textArea.style.left = '-999999px';
+            document.body.appendChild(textArea);
+            textArea.select();
+            
+            try {
+                document.execCommand('copy');
+                showCopySuccess();
+            } catch (err) {
+                console.error('Copy failed:', err);
+            }
+            
+            document.body.removeChild(textArea);
+        }
+
+        function showCopySuccess() {
+            const successMsg = document.getElementById('copySuccessMsg');
+            const button = document.getElementById('copyEmailBtn');
+            
+            // Show success message
+            successMsg.classList.add('show');
+            button.classList.add('copied');
+            
+            // Hide after 3 seconds
+            setTimeout(() => {
+                successMsg.classList.remove('show');
+                button.classList.remove('copied');
+            }, 3000);
+        }
+    </script>
     
     <!-- Language Detection Script -->
     <script>
@@ -71,7 +136,8 @@
           navContact: "Get in Touch",
           pageTitle1: "Get in",
           pageTitle2: "Touch",
-          contactText: "Ready to bring your vision to life? Let's connect with our team and create something extraordinary together."
+          contactText: "Ready to bring your vision to life? Let's connect with our team and create something extraordinary together.",
+          copySuccessText: "Email copied to clipboard!"
         },
         ro: {
           navHome: "Acasă",
@@ -80,7 +146,8 @@
           navContact: "Contact",
           pageTitle1: "Ia",
           pageTitle2: "Legătura",
-          contactText: "Gata să dai viață viziunii tale? Hai să ne conectăm cu echipa noastră și să creăm ceva extraordinar împreună."
+          contactText: "Gata să dai viață viziunii tale? Hai să ne conectăm cu echipa noastră și să creăm ceva extraordinar împreună.",
+          copySuccessText: "Email copiat în clipboard!"
         }
       };
 
@@ -95,7 +162,18 @@
         document.getElementById("page-title-1").textContent = t.pageTitle1;
         document.getElementById("page-title-2").textContent = t.pageTitle2;
         document.getElementById("contact-text").textContent = t.contactText;
+        document.getElementById("copy-success-text").textContent = t.copySuccessText;
       }
 
       fetch("https://ipapi.co/json/")
-        .then(response =>
+        .then(response => response.json())
+        .then(data => {
+          const lang = data.country_code === "RO" ? "ro" : "en";
+          applyLanguage(lang);
+        })
+        .catch(() => {
+          applyLanguage("en");
+        });
+    </script>
+</body>
+</html>

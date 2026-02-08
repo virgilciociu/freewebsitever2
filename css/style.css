@@ -1089,48 +1089,153 @@ body::before {
   margin-bottom: 50px;
 }
 
-.email-link {
+/* Click-to-Copy Email Button */
+.email-copy-wrapper {
+  position: relative;
+  display: inline-block;
+}
+
+.email-copy-button {
   display: inline-flex;
   align-items: center;
   gap: 18px;
   padding: 24px 50px;
   background: var(--ibm-blue);
   color: var(--ibm-white);
-  text-decoration: none;
+  border: none;
   font-size: 22px;
   font-weight: 600;
   font-family: 'IBM Plex Mono', monospace;
   border-radius: 14px;
+  cursor: pointer;
   transition: var(--transition);
   box-shadow: var(--shadow-hover);
+  position: relative;
+  overflow: hidden;
 }
 
-.email-link:hover {
+.email-copy-button::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.2);
+  transform: translate(-50%, -50%);
+  transition: width 0.6s, height 0.6s;
+}
+
+.email-copy-button:hover::before {
+  width: 300px;
+  height: 300px;
+}
+
+.email-copy-button:hover {
   background: var(--ibm-blue-dark);
   transform: translateY(-6px);
   box-shadow: 0 12px 50px rgba(15, 98, 254, 0.3);
 }
 
-.email-link svg {
-  width: 32px;
-  height: 32px;
+.email-copy-button.copied {
+  background: #28a745;
+  transform: scale(1.05);
+}
+
+.email-icon,
+.copy-icon {
+  width: 28px;
+  height: 28px;
+  stroke: currentColor;
+  position: relative;
+  z-index: 1;
+}
+
+.email-text {
+  position: relative;
+  z-index: 1;
+}
+
+.copy-icon {
+  opacity: 0.8;
+  transition: var(--transition-fast);
+}
+
+.email-copy-button:hover .copy-icon {
+  opacity: 1;
+  transform: scale(1.1);
+}
+
+/* Copy Success Message */
+.copy-success-message {
+  position: absolute;
+  top: -60px;
+  left: 50%;
+  transform: translateX(-50%) translateY(10px);
+  background: #28a745;
+  color: white;
+  padding: 12px 24px;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(40, 167, 69, 0.3);
+  white-space: nowrap;
+}
+
+.copy-success-message::after {
+  content: '';
+  position: absolute;
+  bottom: -8px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0;
+  height: 0;
+  border-left: 8px solid transparent;
+  border-right: 8px solid transparent;
+  border-top: 8px solid #28a745;
+}
+
+.copy-success-message.show {
+  opacity: 1;
+  transform: translateX(-50%) translateY(0);
+}
+
+.copy-success-message svg {
+  width: 20px;
+  height: 20px;
   stroke: currentColor;
 }
 
 @media (max-width: 768px) {
-  .email-link {
+  .email-copy-button {
     padding: 20px 35px;
     font-size: 18px;
     gap: 14px;
+    flex-direction: column;
+    text-align: center;
   }
   
-  .email-link svg {
+  .email-icon,
+  .copy-icon {
     width: 26px;
     height: 26px;
   }
   
   .contact-intro {
     font-size: 19px;
+  }
+  
+  .copy-success-message {
+    font-size: 14px;
+    padding: 10px 20px;
+    top: -55px;
   }
 }
 
