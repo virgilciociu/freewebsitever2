@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>About Me - Virgil Ciociu</title>
+    <title>About Us - WebCraft Studio</title>
 
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -19,7 +19,7 @@
     <!-- NAVIGATION MENU -->
     <nav class="main-nav">
         <div class="nav-brand">
-            <a href="index.html">Virgil C</a>
+            <a href="index.html">WebCraft Studio</a>
         </div>
         <button class="nav-toggle" aria-label="Toggle navigation">
             <span></span>
@@ -28,32 +28,61 @@
         </button>
         <ul class="nav-menu">
             <li><a href="index.html" class="nav-link" id="nav-home">Home</a></li>
-            <li><a href="about.html" class="nav-link active" id="nav-about">About Me</a></li>
-            <li><a href="projects.html" class="nav-link" id="nav-projects">My Projects</a></li>
+            <li><a href="about.html" class="nav-link active" id="nav-about">About Us</a></li>
+            <li><a href="projects.html" class="nav-link" id="nav-projects">Our Projects</a></li>
             <li><a href="contact.html" class="nav-link" id="nav-contact">Get in Touch</a></li>
         </ul>
     </nav>
 
-    <!-- ABOUT ME SECTION -->
+    <!-- ABOUT US SECTION -->
     <section class="about-page">
         <div class="container">
             <h1 class="page-title">
                 <span id="page-title-1">About</span>
-                <span id="page-title-2">Me</span>
+                <span id="page-title-2">Us</span>
             </h1>
 
             <div class="about-content">
                 <div class="about-avatar">
                     <div class="avatar-frame">
-                        <img src="image/avatar-marian-zburlea.jpg" alt="Virgil Ciociu">
+                        <!-- Professional team photo from Unsplash -->
+                        <img src="image/avatar.avif"WebCraft Studio Team">
                     </div>
                 </div>
 
                 <div class="about-text">
                     <div class="text-frame">
                         <p id="about-description">
-                            I am a dedicated Front-End Developer with a passion for creating beautiful, functional websites. With expertise in modern web technologies and a keen eye for design, I bring ideas to life through clean code and intuitive user experiences. Every project is an opportunity to push boundaries and deliver excellence.
+                            We are a professional web development team based in the UK, specializing in creating stunning, high-performance websites for businesses of all sizes. With years of combined experience and a passion for innovation, we transform your vision into digital reality through clean code and intuitive user experiences. Every project is an opportunity to push boundaries and deliver excellence.
                         </p>
+                        
+                        <!-- Trust Signals -->
+                        <div class="trust-signals">
+                            <div class="trust-item">
+                                <span class="trust-number" id="trust-websites">100+</span>
+                                <span class="trust-label" id="trust-websites-label">Websites Delivered</span>
+                            </div>
+                            <div class="trust-item">
+                                <span class="trust-number" id="trust-experience">5+</span>
+                                <span class="trust-label" id="trust-experience-label">Years Experience</span>
+                            </div>
+                            <div class="trust-item">
+                                <span class="trust-number" id="trust-support">24/7</span>
+                                <span class="trust-label" id="trust-support-label">Support Available</span>
+                            </div>
+                        </div>
+
+                        <!-- Expertise List -->
+                        <div class="expertise-section">
+                            <h3 id="expertise-title">Our Expertise:</h3>
+                            <ul class="expertise-list">
+                                <li id="expertise-1">✓ Custom Website Development</li>
+                                <li id="expertise-2">✓ E-commerce Solutions</li>
+                                <li id="expertise-3">✓ Restaurant & Hospitality Websites</li>
+                                <li id="expertise-4">✓ Service Business Platforms</li>
+                                <li id="expertise-5">✓ Ongoing Maintenance & Support</li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -68,21 +97,45 @@
       const texts = {
         en: {
           navHome: "Home",
-          navAbout: "About Me",
-          navProjects: "My Projects",
+          navAbout: "About Us",
+          navProjects: "Our Projects",
           navContact: "Get in Touch",
           pageTitle1: "About",
-          pageTitle2: "Me",
-          aboutDescription: "I am a dedicated Front-End Developer with a passion for creating beautiful, functional websites. With expertise in modern web technologies and a keen eye for design, I bring ideas to life through clean code and intuitive user experiences. Every project is an opportunity to push boundaries and deliver excellence."
+          pageTitle2: "Us",
+          aboutDescription: "We are a professional web development team based in the UK, specializing in creating stunning, high-performance websites for businesses of all sizes. With years of combined experience and a passion for innovation, we transform your vision into digital reality through clean code and intuitive user experiences. Every project is an opportunity to push boundaries and deliver excellence.",
+          trustWebsites: "100+",
+          trustWebsitesLabel: "Websites Delivered",
+          trustExperience: "5+",
+          trustExperienceLabel: "Years Experience",
+          trustSupport: "24/7",
+          trustSupportLabel: "Support Available",
+          expertiseTitle: "Our Expertise:",
+          expertise1: "✓ Custom Website Development",
+          expertise2: "✓ E-commerce Solutions",
+          expertise3: "✓ Restaurant & Hospitality Websites",
+          expertise4: "✓ Service Business Platforms",
+          expertise5: "✓ Ongoing Maintenance & Support"
         },
         ro: {
           navHome: "Acasă",
-          navAbout: "Despre Mine",
-          navProjects: "Proiectele Mele",
+          navAbout: "Despre Noi",
+          navProjects: "Proiectele Noastre",
           navContact: "Contact",
           pageTitle1: "Despre",
-          pageTitle2: "Mine",
-          aboutDescription: "Sunt un dezvoltator Front-End dedicat, cu pasiune pentru crearea de site-uri frumoase și funcționale. Cu experiență în tehnologii web moderne și un ochi pentru design, transform ideile în realitate prin cod curat și experiențe intuitive pentru utilizatori. Fiecare proiect este o oportunitate de a depăși limitele și de a oferi excelență."
+          pageTitle2: "Noi",
+          aboutDescription: "Suntem o echipă profesională de dezvoltare web cu sediul în UK, specializată în crearea de site-uri web impresionante și performante pentru afaceri de toate dimensiunile. Cu ani de experiență combinată și pasiune pentru inovație, transformăm viziunea ta în realitate digitală prin cod curat și experiențe intuitive pentru utilizatori. Fiecare proiect este o oportunitate de a depăși limitele și de a oferi excelență.",
+          trustWebsites: "100+",
+          trustWebsitesLabel: "Website-uri Livrate",
+          trustExperience: "5+",
+          trustExperienceLabel: "Ani Experiență",
+          trustSupport: "24/7",
+          trustSupportLabel: "Suport Disponibil",
+          expertiseTitle: "Expertiza Noastră:",
+          expertise1: "✓ Dezvoltare Website Personalizat",
+          expertise2: "✓ Soluții E-commerce",
+          expertise3: "✓ Website-uri Restaurant & Horeca",
+          expertise4: "✓ Platforme pentru Servicii",
+          expertise5: "✓ Mentenanță & Suport Continuu"
         }
       };
 
@@ -97,6 +150,20 @@
         document.getElementById("page-title-1").textContent = t.pageTitle1;
         document.getElementById("page-title-2").textContent = t.pageTitle2;
         document.getElementById("about-description").textContent = t.aboutDescription;
+        
+        document.getElementById("trust-websites").textContent = t.trustWebsites;
+        document.getElementById("trust-websites-label").textContent = t.trustWebsitesLabel;
+        document.getElementById("trust-experience").textContent = t.trustExperience;
+        document.getElementById("trust-experience-label").textContent = t.trustExperienceLabel;
+        document.getElementById("trust-support").textContent = t.trustSupport;
+        document.getElementById("trust-support-label").textContent = t.trustSupportLabel;
+        
+        document.getElementById("expertise-title").textContent = t.expertiseTitle;
+        document.getElementById("expertise-1").textContent = t.expertise1;
+        document.getElementById("expertise-2").textContent = t.expertise2;
+        document.getElementById("expertise-3").textContent = t.expertise3;
+        document.getElementById("expertise-4").textContent = t.expertise4;
+        document.getElementById("expertise-5").textContent = t.expertise5;
       }
 
       fetch("https://ipapi.co/json/")

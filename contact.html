@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Get in Touch - Virgil Ciociu</title>
+    <title>Get in Touch - WebCraft Studio</title>
 
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -19,7 +19,7 @@
     <!-- NAVIGATION MENU -->
     <nav class="main-nav">
         <div class="nav-brand">
-            <a href="index.html">Virgil C</a>
+            <a href="index.html">WebCraft Studio</a>
         </div>
         <button class="nav-toggle" aria-label="Toggle navigation">
             <span></span>
@@ -47,40 +47,40 @@
                     Ready to bring your vision to life? Let's connect and create something extraordinary together.
                 </p>
                 
-                <a href="mailto:ciociu.adr@gmail.com" class="email-link">
+                <a href="/cdn-cgi/l/email-protection#7e1d17111d170b501f1a0c3e19131f1712501d1113" class="email-link">
                     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                         <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
                         <polyline points="22,6 12,13 2,6"></polyline>
                     </svg>
-                    <span>ciociu.adr@gmail.com</span>
+                    <span><span class="__cf_email__" data-cfemail="8eede7e1ede7fba0efeafccee9e3efe7e2a0ede1e3">[email&#160;protected]</span></span>
                 </a>
             </div>
         </div>
     </section>
 
     <!-- JavaScript -->
-    <script src="js/script.js"></script>
+    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script src="js/script.js"></script>
     
     <!-- Language Detection Script -->
     <script>
       const texts = {
         en: {
           navHome: "Home",
-          navAbout: "About Me",
-          navProjects: "My Projects",
+          navAbout: "About Us",
+          navProjects: "Our Projects",
           navContact: "Get in Touch",
           pageTitle1: "Get in",
           pageTitle2: "Touch",
-          contactText: "Ready to bring your vision to life? Let's connect and create something extraordinary together."
+          contactText: "Ready to bring your vision to life? Let's connect with our team and create something extraordinary together."
         },
         ro: {
           navHome: "Acasă",
-          navAbout: "Despre Mine",
-          navProjects: "Proiectele Mele",
+          navAbout: "Despre Noi",
+          navProjects: "Proiectele Noastre",
           navContact: "Contact",
           pageTitle1: "Ia",
           pageTitle2: "Legătura",
-          contactText: "Gata să dai viață viziunii tale? Hai să ne conectăm și să creăm ceva extraordinar împreună."
+          contactText: "Gata să dai viață viziunii tale? Hai să ne conectăm cu echipa noastră și să creăm ceva extraordinar împreună."
         }
       };
 
@@ -98,14 +98,4 @@
       }
 
       fetch("https://ipapi.co/json/")
-        .then(response => response.json())
-        .then(data => {
-          const lang = data.country_code === "RO" ? "ro" : "en";
-          applyLanguage(lang);
-        })
-        .catch(() => {
-          applyLanguage("en");
-        });
-    </script>
-</body>
-</html>
+        .then(response =>

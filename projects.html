@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>My Projects - Virgil Ciociu</title>
+    <title>Find Your Perfect Website - WebCraft Studio</title>
 
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -19,7 +19,7 @@
     <!-- NAVIGATION MENU -->
     <nav class="main-nav">
         <div class="nav-brand">
-            <a href="index.html">Virgil Ciociu</a>
+            <a href="index.html">WebCraft Studio</a>
         </div>
         <button class="nav-toggle" aria-label="Toggle navigation">
             <span></span>
@@ -38,73 +38,113 @@
     <section class="projects-page">
         <div class="container">
             <h1 class="page-title">
-                <span id="page-title-1">My</span>
-                <span id="page-title-2">Projects</span>
+                <span id="page-title-1">Find Your</span>
+                <span id="page-title-2">Perfect Website</span>
             </h1>
 
-            <div class="projects-grid">
-                <!-- Project 1: ART Shop -->
-                <div class="project-card">
-                    <h3 id="project-1-title">ART Shop</h3>
-                    <p id="project-1-desc">A comprehensive e-commerce platform for art supplies and creative materials.</p>
-                    <a href="https://www.cassart.co.uk/" target="_blank" class="project-link">
-                        <span id="project-1-link">View Live Project</span>
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <line x1="5" y1="12" x2="19" y2="12"></line>
-                            <polyline points="12 5 19 12 12 19"></polyline>
-                        </svg>
-                    </a>
+            <!-- QUESTIONNAIRE SECTION -->
+            <div id="questionnaire-section" class="questionnaire-wrapper">
+                <div class="questionnaire-intro">
+                    <h2 id="quiz-intro-title">🎯 Discover the Perfect Website for Your Business</h2>
+                    <p id="quiz-intro-text">Answer 5 quick questions and we'll show you projects tailored to your needs!</p>
                 </div>
 
-                <!-- Project 2: YouTube To MP3 -->
-                <div class="project-card">
-                    <h3 id="project-2-title">YouTube To MP3</h3>
-                    <p id="project-2-desc">A powerful web application for converting YouTube videos to high-quality MP3 audio files.</p>
-                    <a href="https://www.hirequotient.com/youtube-to-mp3" target="_blank" class="project-link">
-                        <span id="project-2-link">View Live Project</span>
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <line x1="5" y1="12" x2="19" y2="12"></line>
-                            <polyline points="12 5 19 12 12 19"></polyline>
-                        </svg>
-                    </a>
-                </div>
-
-                <!-- Project 3: Restaurants Portfolio -->
-                <div class="project-card">
-                    <h3 id="project-3-title">Restaurants Portfolio</h3>
-                    <p id="project-3-desc">A collection of elegant restaurant websites featuring modern design and seamless user experience.</p>
-                    <div class="project-links-multiple">
-                        <a href="https://shaksgrillhouse.co.uk/" target="_blank" class="project-link-small">
-                            <span id="project-3-link-1">Shak's Grill</span>
-                        </a>
-                        <a href="https://virgilciociu.github.io/restaurant/" target="_blank" class="project-link-small">
-                            <span id="project-3-link-2">A Restauramt in Germany</span>
-                        </a>
-                        <a href="https://laterrazatapasbar.co.uk/" target="_blank" class="project-link-small">
-                            <span id="project-3-link-3">La Terraza</span>
-                        </a>
+                <form id="website-quiz" class="quiz-form">
+                    <!-- Question 1: Business Type -->
+                    <div class="quiz-question">
+                        <label class="quiz-label" id="q1-label">1. What type of business do you have?</label>
+                        <select name="business_type" required class="quiz-select">
+                            <option value="" id="q1-placeholder">Select your business type</option>
+                            <option value="restaurant" id="q1-opt1">Restaurant / Café / Bar</option>
+                            <option value="ecommerce" id="q1-opt2">E-commerce / Online Store</option>
+                            <option value="services" id="q1-opt3">Services (Auto, Beauty, etc.)</option>
+                            <option value="portfolio" id="q1-opt4">Portfolio / Creative Agency</option>
+                            <option value="other" id="q1-opt5">Other</option>
+                        </select>
                     </div>
-                </div>
 
-                <!-- Project 4: AutoGarage -->
-                <div class="project-card">
-                    <h3 id="project-4-title">AutoGarage</h3>
-                    <p id="project-4-desc">A professional automotive service website with booking system and service catalog.</p>
-                    <a href="https://motamecltd.co.uk/" target="_blank" class="project-link">
-                        <span id="project-4-link">View Live Project</span>
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <line x1="5" y1="12" x2="19" y2="12"></line>
-                            <polyline points="12 5 19 12 12 19"></polyline>
-                        </svg>
-                    </a>
-                </div>
+                    <!-- Question 2: Online Sales -->
+                    <div class="quiz-question">
+                        <label class="quiz-label" id="q2-label">2. Do you need online sales capabilities?</label>
+                        <div class="quiz-radio-group">
+                            <label class="quiz-radio">
+                                <input type="radio" name="online_sales" value="yes" required>
+                                <span id="q2-opt1">Yes, I want to sell online</span>
+                            </label>
+                            <label class="quiz-radio">
+                                <input type="radio" name="online_sales" value="no">
+                                <span id="q2-opt2">No, just information/showcase</span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <!-- Question 3: Number of Pages -->
+                    <div class="quiz-question">
+                        <label class="quiz-label" id="q3-label">3. How many pages do you estimate needing?</label>
+                        <select name="page_count" required class="quiz-select">
+                            <option value="" id="q3-placeholder">Select page count</option>
+                            <option value="1-5" id="q3-opt1">1-5 pages (Simple site)</option>
+                            <option value="5-10" id="q3-opt2">5-10 pages (Medium site)</option>
+                            <option value="10+" id="q3-opt3">10+ pages (Large site)</option>
+                        </select>
+                    </div>
+
+                    <!-- Question 4: Forms/Booking -->
+                    <div class="quiz-question">
+                        <label class="quiz-label" id="q4-label">4. Do you need contact forms or booking systems?</label>
+                        <div class="quiz-radio-group">
+                            <label class="quiz-radio">
+                                <input type="radio" name="forms" value="yes" required>
+                                <span id="q4-opt1">Yes (Contact/Reservations/Bookings)</span>
+                            </label>
+                            <label class="quiz-radio">
+                                <input type="radio" name="forms" value="no">
+                                <span id="q4-opt2">No, not needed</span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <!-- Question 5: Maintenance Budget -->
+                    <div class="quiz-question">
+                        <label class="quiz-label" id="q5-label">5. What's your monthly maintenance budget?</label>
+                        <select name="budget" required class="quiz-select">
+                            <option value="" id="q5-placeholder">Select your budget</option>
+                            <option value="12-20" id="q5-opt1">£12-20/month (Basic)</option>
+                            <option value="20-50" id="q5-opt2">£20-50/month (Standard)</option>
+                            <option value="50+" id="q5-opt3">£50+/month (Premium)</option>
+                        </select>
+                    </div>
+
+                    <!-- Email Field (Hidden for Formspree) -->
+                    <input type="hidden" name="_subject" value="New Website Quiz Submission">
+                    <input type="hidden" name="_replyto" value="ciociu.adr@gmail.com">
+
+                    <!-- Submit Button -->
+                    <button type="submit" class="quiz-submit-btn" id="quiz-submit">
+                        <span id="quiz-btn-text">🚀 Show Me Perfect Websites</span>
+                    </button>
+
+                    <!-- Success Message -->
+                    <div id="quiz-success" class="quiz-success hidden">
+                        <p id="quiz-success-text">✅ Perfect! Here are websites tailored to your needs:</p>
+                    </div>
+                </form>
             </div>
 
-            <!-- TEXT FRAME UNDER PROJECTS -->
-            <div class="projects-text-frame">
-                <p id="projects-description">
-                    Each project represents a unique challenge and a commitment to excellence. From e-commerce platforms to restaurant websites, I bring creativity and technical expertise to every build.
-                </p>
+            <!-- PROJECTS GRID (Hidden initially, shown after quiz) -->
+            <div id="projects-results" class="projects-results hidden">
+                <h2 class="results-title" id="results-title">✨ Your Perfect Website Examples</h2>
+                
+                <div class="projects-grid" id="filtered-projects">
+                    <!-- Projects will be injected here by JavaScript -->
+                </div>
+
+                <!-- CTA After Results -->
+                <div class="results-cta">
+                    <h3 id="results-cta-title">Love what you see?</h3>
+                    <p id="results-cta-text">Let's build your perfect website together - 100% FREE construction, you only pay for maintenance!</p>
+                    <a href="contact.html" class="cta-button" id="results-cta-btn">Get Your Free Website →</a>
+                </div>
             </div>
         </div>
     </section>
@@ -112,54 +152,276 @@
     <!-- JavaScript -->
     <script src="js/script.js"></script>
     
+    <!-- Quiz Logic Script -->
+    <script>
+        // Project Database with Tags
+        const projectsDatabase = [
+            {
+                id: 'artshop',
+                title: { en: 'ART Shop', ro: 'ART Shop' },
+                desc: { 
+                    en: 'A comprehensive e-commerce platform for art supplies and creative materials.',
+                    ro: 'O platformă e-commerce cuprinzătoare pentru produse de artă și materiale creative.'
+                },
+                link: 'https://www.cassart.co.uk/',
+                tags: ['ecommerce', 'portfolio'],
+                features: ['online_sales', 'forms'],
+                pages: '10+',
+                image: 'image/ArtShopp.jpg'
+            },
+            {
+                id: 'youtube-mp3',
+                title: { en: 'YouTube To MP3', ro: 'YouTube To MP3' },
+                desc: { 
+                    en: 'A powerful web application for converting YouTube videos to high-quality MP3 audio files.',
+                    ro: 'O aplicație web puternică pentru convertirea videoclipurilor YouTube în fișiere audio MP3 de înaltă calitate.'
+                },
+                link: 'https://www.hirequotient.com/youtube-to-mp3',
+                tags: ['services', 'portfolio'],
+                features: ['no_sales', 'no_forms'],
+                pages: '1-5',
+                image: 'image/MP3Converter.jpg'
+            },
+            {
+                id: 'shaks-grill',
+                title: { en: "Shak's Grill", ro: "Shak's Grill" },
+                desc: { 
+                    en: 'Modern restaurant website with menu display and online reservations.',
+                    ro: 'Site modern de restaurant cu meniu și rezervări online.'
+                },
+                link: 'https://shaksgrillhouse.co.uk/',
+                tags: ['restaurant'],
+                features: ['no_sales', 'forms'],
+                pages: '1-5',
+                image: 'image/Shak\'sGrill.jpg'
+            },
+            {
+                id: 'restaurant-custom',
+                title: { en: 'Custom Restaurant', ro: 'Restaurant Personalizat' },
+                desc: { 
+                    en: 'Elegant restaurant website featuring modern design and seamless user experience.',
+                    ro: 'Site elegant de restaurant cu design modern și experiență fluidă pentru utilizatori.'
+                },
+                link: 'https://virgilciociu.github.io/restaurant/',
+                tags: ['restaurant'],
+                features: ['no_sales', 'forms'],
+                pages: '1-5',
+                image: 'image/SiegridRestaurant.jpg'
+            },
+            {
+                id: 'la-terraza',
+                title: { en: 'La Terraza', ro: 'La Terraza' },
+                desc: { 
+                    en: 'Beautiful tapas bar website with menu and contact information.',
+                    ro: 'Site frumos pentru bar de tapas cu meniu și informații de contact.'
+                },
+                link: 'https://laterrazatapasbar.co.uk/',
+                tags: ['restaurant'],
+                features: ['no_sales', 'forms'],
+                pages: '1-5',
+                image: 'image/LaTerrazaRest.jpg'
+            },
+            {
+                id: 'auto-garage',
+                title: { en: 'AutoGarage', ro: 'AutoGarage' },
+                desc: { 
+                    en: 'A professional automotive service website with booking system and service catalog.',
+                    ro: 'Un site web profesional pentru service auto cu sistem de rezervări și catalog de servicii.'
+                },
+                link: 'https://motamecltd.co.uk/',
+                tags: ['services'],
+                features: ['no_sales', 'forms'],
+                pages: '5-10',
+                image: 'image/AutoGarage.jpg'
+            }
+        ];
+
+        // Quiz Form Handler
+        const quizForm = document.getElementById('website-quiz');
+        const questionnaireSection = document.getElementById('questionnaire-section');
+        const projectsResults = document.getElementById('projects-results');
+        const filteredProjectsContainer = document.getElementById('filtered-projects');
+        const successMessage = document.getElementById('quiz-success');
+
+        quizForm.addEventListener('submit', async function(e) {
+            e.preventDefault();
+
+            // Get form data
+            const formData = new FormData(quizForm);
+            const answers = {
+                businessType: formData.get('business_type'),
+                onlineSales: formData.get('online_sales'),
+                pageCount: formData.get('page_count'),
+                forms: formData.get('forms'),
+                budget: formData.get('budget')
+            };
+
+            // Send to Formspree (replace with your form ID)
+            try {
+                await fetch('https://formspree.io/f/YOUR_FORM_ID', {
+                    method: 'POST',
+                    body: formData,
+                    headers: {
+                        'Accept': 'application/json'
+                    }
+                });
+            } catch (error) {
+                console.log('Form submission error:', error);
+            }
+
+            // Filter projects based on answers
+            const matchedProjects = filterProjects(answers);
+
+            // Display results
+            displayResults(matchedProjects);
+
+            // Show success message and scroll
+            successMessage.classList.remove('hidden');
+            setTimeout(() => {
+                questionnaireSection.style.display = 'none';
+                projectsResults.classList.remove('hidden');
+                projectsResults.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            }, 800);
+        });
+
+        function filterProjects(answers) {
+            return projectsDatabase.filter(project => {
+                let score = 0;
+
+                // Match business type
+                if (project.tags.includes(answers.businessType)) {
+                    score += 3;
+                }
+
+                // Match online sales
+                const salesFeature = answers.onlineSales === 'yes' ? 'online_sales' : 'no_sales';
+                if (project.features.includes(salesFeature)) {
+                    score += 2;
+                }
+
+                // Match forms/booking
+                const formsFeature = answers.forms === 'yes' ? 'forms' : 'no_forms';
+                if (project.features.includes(formsFeature)) {
+                    score += 1;
+                }
+
+                // Match page count
+                if (project.pages === answers.pageCount) {
+                    score += 1;
+                }
+
+                return score >= 2; // Show projects with at least 2 points
+            }).sort((a, b) => {
+                // Sort by relevance (this is simplified - you can make it more sophisticated)
+                return 0;
+            });
+        }
+
+        function displayResults(projects) {
+            const currentLang = document.documentElement.getAttribute('lang') || 'en';
+            
+            if (projects.length === 0) {
+                // Show all if no matches
+                projects = projectsDatabase;
+            }
+
+            filteredProjectsContainer.innerHTML = projects.map(project => `
+                <div class="project-card" style="animation: fadeInUp 0.6s ease-out;">
+                    <div class="project-image" style="background-image: url('${project.image}');"></div>
+                    <h3>${project.title[currentLang]}</h3>
+                    <p>${project.desc[currentLang]}</p>
+                    <a href="${project.link}" target="_blank" class="project-link">
+                        <span>${currentLang === 'ro' ? 'Vezi Proiectul Live' : 'View Live Project'}</span>
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <line x1="5" y1="12" x2="19" y2="12"></line>
+                            <polyline points="12 5 19 12 12 19"></polyline>
+                        </svg>
+                    </a>
+                </div>
+            `).join('');
+        }
+    </script>
+    
     <!-- Language Detection Script -->
     <script>
       const texts = {
         en: {
           navHome: "Home",
-          navAbout: "About Me",
-          navProjects: "My Projects",
+          navAbout: "About Us",
+          navProjects: "Our Projects",
           navContact: "Get in Touch",
-          pageTitle1: "My",
-          pageTitle2: "Projects",
-          project1Title: "ART Shop",
-          project1Desc: "A comprehensive e-commerce platform for art supplies and creative materials.",
-          project1Link: "View Live Project",
-          project2Title: "YouTube To MP3",
-          project2Desc: "A powerful web application for converting YouTube videos to high-quality MP3 audio files.",
-          project2Link: "View Live Project",
-          project3Title: "Restaurants Portfolio",
-          project3Desc: "A collection of elegant restaurant websites featuring modern design and seamless user experience.",
-          project3Link1: "Shak's Grill",
-          project3Link2: "A Restaurant in Germany",
-          project3Link3: "La Terraza",
-          project4Title: "AutoGarage",
-          project4Desc: "A professional automotive service website with booking system and service catalog.",
-          project4Link: "View Live Project",
-          projectsDescription: "Each project represents a unique challenge and a commitment to excellence. From e-commerce platforms to restaurant websites, I bring creativity and technical expertise to every build."
+          pageTitle1: "Find Your",
+          pageTitle2: "Perfect Website",
+          quizIntroTitle: "🎯 Discover the Perfect Website for Your Business",
+          quizIntroText: "Answer 5 quick questions and we'll show you projects tailored to your needs!",
+          q1Label: "1. What type of business do you have?",
+          q1Placeholder: "Select your business type",
+          q1Opt1: "Restaurant / Café / Bar",
+          q1Opt2: "E-commerce / Online Store",
+          q1Opt3: "Services (Auto, Beauty, etc.)",
+          q1Opt4: "Portfolio / Creative Agency",
+          q1Opt5: "Other",
+          q2Label: "2. Do you need online sales capabilities?",
+          q2Opt1: "Yes, I want to sell online",
+          q2Opt2: "No, just information/showcase",
+          q3Label: "3. How many pages do you estimate needing?",
+          q3Placeholder: "Select page count",
+          q3Opt1: "1-5 pages (Simple site)",
+          q3Opt2: "5-10 pages (Medium site)",
+          q3Opt3: "10+ pages (Large site)",
+          q4Label: "4. Do you need contact forms or booking systems?",
+          q4Opt1: "Yes (Contact/Reservations/Bookings)",
+          q4Opt2: "No, not needed",
+          q5Label: "5. What's your monthly maintenance budget?",
+          q5Placeholder: "Select your budget",
+          q5Opt1: "£12-20/month (Basic)",
+          q5Opt2: "£20-50/month (Standard)",
+          q5Opt3: "£50+/month (Premium)",
+          quizBtnText: "🚀 Show Me Perfect Websites",
+          quizSuccessText: "✅ Perfect! Here are websites tailored to your needs:",
+          resultsTitle: "✨ Your Perfect Website Examples",
+          resultsCTATitle: "Love what you see?",
+          resultsCTAText: "Let's build your perfect website together - 100% FREE construction, you only pay for maintenance!",
+          resultsCTABtn: "Get Your Free Website →"
         },
         ro: {
           navHome: "Acasă",
-          navAbout: "Despre Mine",
-          navProjects: "Proiectele Mele",
+          navAbout: "Despre Noi",
+          navProjects: "Proiectele Noastre",
           navContact: "Contact",
-          pageTitle1: "Proiectele",
-          pageTitle2: "Mele",
-          project1Title: "ART Shop",
-          project1Desc: "O platformă e-commerce cuprinzătoare pentru produse de artă și materiale creative.",
-          project1Link: "Vezi Proiectul Live",
-          project2Title: "YouTube To MP3",
-          project2Desc: "O aplicație web puternică pentru convertirea videoclipurilor YouTube în fișiere audio MP3 de înaltă calitate.",
-          project2Link: "Vezi Proiectul Live",
-          project3Title: "Portofoliu Restaurante",
-          project3Desc: "O colecție de site-uri elegante pentru restaurante, cu design modern și experiență fluidă pentru utilizatori.",
-          project3Link1: "Shak's Grill",
-          project3Link2: "Restaurant Personalizat",
-          project3Link3: "La Terraza",
-          project4Title: "AutoGarage",
-          project4Desc: "Un site web profesional pentru service auto cu sistem de rezervări și catalog de servicii.",
-          project4Link: "Vezi Proiectul Live",
-          projectsDescription: "Fiecare proiect reprezintă o provocare unică și un angajament către excelență. De la platforme e-commerce la site-uri pentru restaurante, aduc creativitate și expertiză tehnică la fiecare realizare."
+          pageTitle1: "Găsește-ți",
+          pageTitle2: "Website-ul Perfect",
+          quizIntroTitle: "🎯 Descoperă Website-ul Perfect pentru Afacerea Ta",
+          quizIntroText: "Răspunde la 5 întrebări rapide și îți vom arăta proiecte personalizate pentru nevoile tale!",
+          q1Label: "1. Ce tip de afacere ai?",
+          q1Placeholder: "Selectează tipul afacerii",
+          q1Opt1: "Restaurant / Cafenea / Bar",
+          q1Opt2: "E-commerce / Magazin Online",
+          q1Opt3: "Servicii (Auto, Înfrumusețare, etc.)",
+          q1Opt4: "Portofoliu / Agenție Creativă",
+          q1Opt5: "Altele",
+          q2Label: "2. Ai nevoie de vânzări online?",
+          q2Opt1: "Da, vreau să vând online",
+          q2Opt2: "Nu, doar informații/prezentare",
+          q3Label: "3. Câte pagini estimezi că ai nevoie?",
+          q3Placeholder: "Selectează numărul de pagini",
+          q3Opt1: "1-5 pagini (Site simplu)",
+          q3Opt2: "5-10 pagini (Site mediu)",
+          q3Opt3: "10+ pagini (Site mare)",
+          q4Label: "4. Ai nevoie de formulare de contact sau rezervări?",
+          q4Opt1: "Da (Contact/Rezervări/Programări)",
+          q4Opt2: "Nu, nu este necesar",
+          q5Label: "5. Care este bugetul tău lunar pentru mentenanță?",
+          q5Placeholder: "Selectează bugetul",
+          q5Opt1: "£12-20/lună (De bază)",
+          q5Opt2: "£20-50/lună (Standard)",
+          q5Opt3: "£50+/lună (Premium)",
+          quizBtnText: "🚀 Arată-mi Website-uri Perfecte",
+          quizSuccessText: "✅ Perfect! Iată website-uri personalizate pentru nevoile tale:",
+          resultsTitle: "✨ Exemple de Website-uri Perfecte pentru Tine",
+          resultsCTATitle: "Îți place ce vezi?",
+          resultsCTAText: "Hai să construim împreună website-ul tău perfect - construcție 100% GRATUITĂ, plătești doar mentenanța!",
+          resultsCTABtn: "Obține Website-ul Gratuit →"
         }
       };
 
@@ -167,27 +429,55 @@
         const t = texts[lang] || texts.en;
         document.documentElement.setAttribute("lang", lang);
         
+        // Navigation
         document.getElementById("nav-home").textContent = t.navHome;
         document.getElementById("nav-about").textContent = t.navAbout;
         document.getElementById("nav-projects").textContent = t.navProjects;
         document.getElementById("nav-contact").textContent = t.navContact;
+        
+        // Page title
         document.getElementById("page-title-1").textContent = t.pageTitle1;
         document.getElementById("page-title-2").textContent = t.pageTitle2;
-        document.getElementById("project-1-title").textContent = t.project1Title;
-        document.getElementById("project-1-desc").textContent = t.project1Desc;
-        document.getElementById("project-1-link").textContent = t.project1Link;
-        document.getElementById("project-2-title").textContent = t.project2Title;
-        document.getElementById("project-2-desc").textContent = t.project2Desc;
-        document.getElementById("project-2-link").textContent = t.project2Link;
-        document.getElementById("project-3-title").textContent = t.project3Title;
-        document.getElementById("project-3-desc").textContent = t.project3Desc;
-        document.getElementById("project-3-link-1").textContent = t.project3Link1;
-        document.getElementById("project-3-link-2").textContent = t.project3Link2;
-        document.getElementById("project-3-link-3").textContent = t.project3Link3;
-        document.getElementById("project-4-title").textContent = t.project4Title;
-        document.getElementById("project-4-desc").textContent = t.project4Desc;
-        document.getElementById("project-4-link").textContent = t.project4Link;
-        document.getElementById("projects-description").textContent = t.projectsDescription;
+        
+        // Quiz intro
+        document.getElementById("quiz-intro-title").textContent = t.quizIntroTitle;
+        document.getElementById("quiz-intro-text").textContent = t.quizIntroText;
+        
+        // Questions
+        document.getElementById("q1-label").textContent = t.q1Label;
+        document.getElementById("q1-placeholder").textContent = t.q1Placeholder;
+        document.getElementById("q1-opt1").textContent = t.q1Opt1;
+        document.getElementById("q1-opt2").textContent = t.q1Opt2;
+        document.getElementById("q1-opt3").textContent = t.q1Opt3;
+        document.getElementById("q1-opt4").textContent = t.q1Opt4;
+        document.getElementById("q1-opt5").textContent = t.q1Opt5;
+        
+        document.getElementById("q2-label").textContent = t.q2Label;
+        document.getElementById("q2-opt1").textContent = t.q2Opt1;
+        document.getElementById("q2-opt2").textContent = t.q2Opt2;
+        
+        document.getElementById("q3-label").textContent = t.q3Label;
+        document.getElementById("q3-placeholder").textContent = t.q3Placeholder;
+        document.getElementById("q3-opt1").textContent = t.q3Opt1;
+        document.getElementById("q3-opt2").textContent = t.q3Opt2;
+        document.getElementById("q3-opt3").textContent = t.q3Opt3;
+        
+        document.getElementById("q4-label").textContent = t.q4Label;
+        document.getElementById("q4-opt1").textContent = t.q4Opt1;
+        document.getElementById("q4-opt2").textContent = t.q4Opt2;
+        
+        document.getElementById("q5-label").textContent = t.q5Label;
+        document.getElementById("q5-placeholder").textContent = t.q5Placeholder;
+        document.getElementById("q5-opt1").textContent = t.q5Opt1;
+        document.getElementById("q5-opt2").textContent = t.q5Opt2;
+        document.getElementById("q5-opt3").textContent = t.q5Opt3;
+        
+        document.getElementById("quiz-btn-text").textContent = t.quizBtnText;
+        document.getElementById("quiz-success-text").textContent = t.quizSuccessText;
+        document.getElementById("results-title").textContent = t.resultsTitle;
+        document.getElementById("results-cta-title").textContent = t.resultsCTATitle;
+        document.getElementById("results-cta-text").textContent = t.resultsCTAText;
+        document.getElementById("results-cta-btn").textContent = t.resultsCTABtn;
       }
 
       fetch("https://ipapi.co/json/")
