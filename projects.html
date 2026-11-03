@@ -13,6 +13,8 @@
     
     <!-- CSS Stylesheet -->
     <link rel="stylesheet" href="css/style.css" />
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%2312b5a6'/%3E%3Ctext x='32' y='45' text-anchor='middle' font-family='Arial,sans-serif' font-weight='700' font-size='38' fill='white'%3EF%3C/text%3E%3C/svg%3E">
+<meta name="description" content="Answer 5 quick questions and we&#x27;ll show you projects tailored to your needs!">
 </head>
 
 <body>
@@ -330,7 +332,7 @@
                     <div class="project-image" style="background-image: url('${project.image}');"></div>
                     <h3>${project.title[currentLang]}</h3>
                     <p>${project.desc[currentLang]}</p>
-                    <a href="${project.link}" target="_blank" class="project-link">
+                    <a href="${project.link}" target="_blank" class="project-link" rel="noopener noreferrer">
                         <span>${currentLang === 'ro' ? 'Vezi Proiectul Live' : 'View Live Project'}</span>
                         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                             <line x1="5" y1="12" x2="19" y2="12"></line>
